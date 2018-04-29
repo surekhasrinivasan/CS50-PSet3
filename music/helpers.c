@@ -5,13 +5,16 @@
 #include <string.h>
 #include <math.h>
 #include <stdlib.h>
-#include <stdio.h>
+#include <stdio.h>  // Jackie - Everything works great!
 
 // Converts a fraction formatted as X/Y to eighths
 int duration(string fraction)
 {
     int numerator = atoi(&fraction[0]);
     int denominator = atoi(&fraction[2]);
+    // Jackie - you can short this code by adding another int that will divide
+    // and multiply the (by using the numerator and denominator) with the 8th
+    // then it will return the value of how many 8th notes
 
     switch (denominator)
     {
@@ -94,8 +97,8 @@ int frequency(string note)
 // Determines whether a string represents a rest
 bool is_rest(string s)
 {
-    if (strcmp(s, ""))
-    {
+    if (strcmp(s, ""))  // Jackie - you can just use one line of code for the return
+    {                   // Jackie - don't need the if and else statement
         return false;
     }
     else
